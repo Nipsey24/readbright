@@ -1,0 +1,70 @@
+{% extends 'core/base.html' %}
+
+{% block title %}About Dyslexia — ReadBright{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>📖 About Dyslexia</h1>
+  <p>Understanding is the first step to helping.</p>
+</div>
+
+<div class="page-content">
+
+  <div class="about-grid">
+
+    <div class="about-card ac-blue">
+      <span class="about-icon">🧠</span>
+      <h2>What is Dyslexia?</h2>
+      <p>Dyslexia is a learning difference that affects how the brain processes written and spoken language. It mainly impacts reading, spelling, and writing — but it has <strong>nothing to do with intelligence</strong>.</p>
+      <p>Many brilliant thinkers, artists, and scientists are dyslexic. It is estimated that 1 in 10 people worldwide has dyslexia.</p>
+    </div>
+
+    <div class="about-card ac-orange">
+      <span class="about-icon">🔍</span>
+      <h2>Common Signs</h2>
+      <ul class="about-list">
+        <li>Difficulty recognising letters and words</li>
+        <li>Spelling the same word differently each time</li>
+        <li>Slower reading compared to peers</li>
+        <li>Mixing up similar letters like b, d, p, q</li>
+        <li>Trouble remembering sequences (e.g. alphabet, months)</li>
+        <li>Difficulty following multi-step instructions</li>
+      </ul>
+    </div>
+
+    <div class="about-card ac-green">
+      <span class="about-icon">💡</span>
+      <h2>How We Can Help</h2>
+      <ul class="about-list">
+        <li>🔊 <strong>Text-to-Speech</strong> — hearing words helps with recognition</li>
+        <li>🔤 <strong>Dyslexia Fonts</strong> — specially designed to reduce confusion</li>
+        <li>🌈 <strong>Colour overlays</strong> — reduce visual stress on the page</li>
+        <li>📏 <strong>Reading rulers</strong> — keep your place on the line</li>
+        <li>🎮 <strong>Games</strong> — make learning engaging and fun</li>
+      </ul>
+    </div>
+
+    <div class="about-card ac-purple">
+      <span class="about-icon">🌟</span>
+      <h2>Famous Dyslexics</h2>
+      <p>You are in great company! Many famous and successful people have dyslexia:</p>
+      <div class="famous-grid">
+        <div class="famous-chip">🎨 Leonardo da Vinci</div>
+        <div class="famous-chip">🍎 Steve Jobs</div>
+        <div class="famous-chip">🚀 Richard Branson</div>
+        <div class="famous-chip">🎬 Steven Spielberg</div>
+        <div class="famous-chip">📚 Agatha Christie</div>
+        <div class="famous-chip">⚡ Thomas Edison</div>
+      </div>
+    </div>
+
+  </div>
+
+  <section id="cta" style="margin-top:40px">
+    <h2>Every Brain is Brilliant! 🧠✨</h2>
+    <p>Dyslexia is a different way of thinking — not a barrier. With the right tools, every child can shine.</p>
+    <a href="{% url 'activities' %}" class="btn-white">🚀 Start Learning Now</a>
+  </section>
+
+</div>
+{% endblock %}

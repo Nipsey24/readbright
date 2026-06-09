@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}ReadBright — Learning is for Everyone!{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Fredoka+One&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+  <!-- ACCESSIBILITY TOOLBAR -->
+  <div id="a11y-bar">
+    <span>⚙️ Tools:</span>
+    <button class="a11y-btn" id="btn-tts">🔊 Read Page</button>
+    <button class="a11y-btn" id="btn-stop">⏹ Stop</button>
+    <button class="a11y-btn" id="btn-fu">A＋ Bigger</button>
+    <button class="a11y-btn" id="btn-fd">A－ Smaller</button>
+    <button class="a11y-btn" id="btn-dark">🌙 Dark Mode</button>
+    <button class="a11y-btn" id="btn-dysfont">🔤 Dyslexic Font</button>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="{% url 'home' %}" {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}>🏠 Home</a>
+    <a href="{% url 'activities' %}" {% if request.resolver_match.url_name == 'activities' %}class="active"{% endif %}>🎮 Activities</a>
+    <a href="{% url 'tools' %}" {% if request.resolver_match.url_name == 'tools' %}class="active"{% endif %}>🛠️ Tools</a>
+    <a href="{% url 'about' %}" {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}>📖 About</a>
+    <a href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>✉️ Contact</a>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  {% block content %}{% endblock %}
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">📚 ReadBright</div>
+    <p>A friendly place to learn for children with dyslexia.</p>
+    <div class="footer-links">
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'activities' %}">Activities</a>
+      <a href="{% url 'tools' %}">Tools</a>
+      <a href="{% url 'contact' %}">Contact</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>Made with 💛 for every kind of learner.</p>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast">✅ Done!</div>
+
+  <script src="{% static 'core/js/main.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

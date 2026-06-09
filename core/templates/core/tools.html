@@ -1,0 +1,90 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Tools — ReadBright{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>🛠️ Dyslexia Tools</h1>
+  <p>Use these tools to make reading easier and more enjoyable!</p>
+</div>
+
+<div class="page-content">
+
+  <div class="tools-grid">
+
+    <!-- TTS Tool -->
+    <div class="tool-card tc-green">
+      <span class="tool-icon">🔊</span>
+      <h3>Text to Speech</h3>
+      <p>Paste any text below and press Play to hear it read aloud.</p>
+      <textarea id="ttsInput" class="tool-textarea" placeholder="Paste or type text here..."></textarea>
+      <div class="tool-controls">
+        <button class="btn-activity" id="ttsPlay">▶️ Play</button>
+        <button class="btn-activity" id="ttsPause">⏸ Pause</button>
+        <button class="btn-activity" id="ttsStop2">⏹ Stop</button>
+      </div>
+      <div class="speed-control">
+        <label>Speed: <span id="speedVal">0.85</span>x</label>
+        <input type="range" id="ttsSpeed" min="0.5" max="1.5" step="0.05" value="0.85"/>
+      </div>
+    </div>
+
+    <!-- Reading Ruler -->
+    <div class="tool-card tc-yellow">
+      <span class="tool-icon">📏</span>
+      <h3>Reading Ruler</h3>
+      <p>A coloured bar follows your mouse to help you track which line you're reading.</p>
+      <div class="ruler-preview" id="rulerPreview">
+        <p>The quick brown fox jumps over the lazy dog. Every reader deserves the right tools.</p>
+        <p>Reading with a ruler helps your eyes stay on the right line. Give it a try!</p>
+        <p>You are doing amazing. Keep going — every word is a victory!</p>
+      </div>
+      <div class="tool-controls">
+        <button class="btn-activity" id="btnRuler">🟡 Toggle Ruler</button>
+        <label>Colour:
+          <select id="rulerColor" class="tool-select">
+            <option value="rgba(255,225,53,0.35)">Yellow</option>
+            <option value="rgba(0,180,255,0.25)">Blue</option>
+            <option value="rgba(0,217,126,0.3)">Green</option>
+            <option value="rgba(255,61,154,0.2)">Pink</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <!-- Font Size -->
+    <div class="tool-card tc-blue">
+      <span class="tool-icon">🔍</span>
+      <h3>Text Size</h3>
+      <p>Adjust the text size across the whole site to what feels most comfortable.</p>
+      <div class="font-preview" id="fontPreview">Sample text — adjust the size!</div>
+      <div class="tool-controls">
+        <button class="btn-activity" id="fpUp">A＋ Bigger</button>
+        <button class="btn-activity" id="fpDown">A－ Smaller</button>
+        <button class="btn-activity" id="fpReset">↺ Reset</button>
+      </div>
+    </div>
+
+    <!-- Colour Overlay -->
+    <div class="tool-card tc-pink">
+      <span class="tool-icon">🌈</span>
+      <h3>Colour Overlay</h3>
+      <p>Apply a tinted overlay to the whole page to reduce visual stress.</p>
+      <div class="overlay-swatches" id="overlaySwatch">
+        <button class="swatch" data-color="rgba(255,225,53,0.15)" style="background:#FFE135">Yellow</button>
+        <button class="swatch" data-color="rgba(0,180,255,0.12)" style="background:#00B4FF;color:white">Blue</button>
+        <button class="swatch" data-color="rgba(0,217,126,0.15)" style="background:#00D97E">Green</button>
+        <button class="swatch" data-color="rgba(255,61,154,0.1)" style="background:#FF3D9A;color:white">Pink</button>
+        <button class="swatch" data-color="none" style="background:#ccc">None</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="readingRuler"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/core/js/tools.js"></script>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact — ReadBright{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>✉️ Contact Us</h1>
+  <p>Got a question? We'd love to hear from you!</p>
+</div>
+
+<div class="page-content">
+  <div class="contact-wrap">
+    <div class="contact-card">
+      <h2>Send a Message 💌</h2>
+      {% if sent %}
+        <div class="success-banner">🎉 Thank you! Your message was sent successfully.</div>
+      {% endif %}
+      <form method="post" class="contact-form" novalidate>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Your Name 😊</label>
+          <input type="text" id="name" name="name" placeholder="E.g. Alex" class="form-input" required/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address 📧</label>
+          <input type="email" id="email" name="email" placeholder="E.g. alex@example.com" class="form-input" required/>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message ✏️</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." class="form-input form-textarea" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-start" style="font-size:1rem;padding:14px 32px;">📨 Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <div class="info-card">
+        <span class="info-icon">📍</span>
+        <div>
+          <h4>Where we are</h4>
+          <p>ReadBright is an online platform — available everywhere in the world!</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">📧</span>
+        <div>
+          <h4>Email</h4>
+          <p>hello@readbright.example.com</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <span class="info-icon">💛</span>
+        <div>
+          <h4>Our Promise</h4>
+          <p>We reply to every message. No child — or parent — is left without support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

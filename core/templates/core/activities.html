@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Activities — ReadBright{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>🎮 Learning Activities</h1>
+  <p>Pick an activity and start your adventure!</p>
+</div>
+
+<div class="page-content">
+
+  <!-- Word Matching Game -->
+  <section class="activity-section">
+    <h2 class="section-title">🔤 Word Matching</h2>
+    <div class="activity-card" id="word-match-card">
+      <p class="activity-desc">Match the picture to the right word. Tap a card to flip it!</p>
+      <div class="word-match-grid" id="matchGrid"></div>
+      <div class="activity-controls">
+        <button class="btn-activity" id="resetMatch">🔄 New Game</button>
+        <span id="matchScore" class="score-badge">⭐ 0 pairs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spelling Challenge -->
+  <section class="activity-section">
+    <h2 class="section-title">📝 Spelling Challenge</h2>
+    <div class="activity-card">
+      <p class="activity-desc">Listen to the word, then type it in the box below.</p>
+      <div class="spelling-area">
+        <div class="spell-word-display" id="spellDisplay">Press Start!</div>
+        <button class="btn-activity btn-listen-word" id="btnListenWord">🔊 Hear the Word</button>
+        <input type="text" id="spellInput" class="spell-input" placeholder="Type the word here..." autocomplete="off" spellcheck="false"/>
+        <button class="btn-activity" id="btnCheckSpell">✅ Check</button>
+        <div id="spellFeedback" class="spell-feedback"></div>
+      </div>
+      <div class="activity-controls">
+        <button class="btn-activity" id="btnNextWord">➡️ Next Word</button>
+        <span id="spellScore" class="score-badge">⭐ 0 correct</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reading Practice -->
+  <section class="activity-section">
+    <h2 class="section-title">📖 Reading Practice</h2>
+    <div class="activity-card">
+      <p class="activity-desc">Read the passage below. Click any word to hear it!</p>
+      <div class="reading-passage" id="readingPassage"></div>
+      <div class="activity-controls">
+        <button class="btn-activity" id="btnReadAll">🔊 Read All</button>
+        <button class="btn-activity" id="btnNewPassage">📄 New Passage</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/core/js/activities.js"></script>
+{% endblock %}

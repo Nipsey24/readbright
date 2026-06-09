@@ -1,0 +1,184 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}ReadBright — Learning is for Everyone!{% endblock %}
+
+{% block content %}
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-text">
+      <h1>
+        <span class="word-blue">Reading</span> is
+        <span class="word-pink">Fun</span> for
+        <span class="word-orange">Everyone!</span> 🌟
+      </h1>
+      <p>
+        We help children with dyslexia learn to read and write with
+        colourful tools, fun games, and a big friendly voice.
+        You are amazing — let's learn together!
+      </p>
+      <div class="hero-buttons">
+        <a href="{% url 'activities' %}" class="btn-primary btn-start">🚀 Start Learning</a>
+        <a href="#" class="btn-primary btn-listen" id="hero-listen">🎧 Listen</a>
+      </div>
+    </div>
+
+    <div class="hero-illo">
+      <div class="big-letter-group">
+        <div class="big-letter">A</div>
+        <div class="big-letter">B</div>
+        <div class="big-letter">C</div>
+        <div class="big-letter">D</div>
+        <div class="big-letter">⭐</div>
+        <div class="big-letter">E</div>
+        <div class="big-letter">F</div>
+        <div class="big-letter">G</div>
+        <div class="big-letter">H</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>📚 Read at your own pace</span>
+      <span>🎮 Fun word games</span>
+      <span>🔊 Listen to any text</span>
+      <span>🌈 Colourful learning</span>
+      <span>⭐ You are a star reader</span>
+      <span>🧠 Every brain is unique</span>
+      <span>🏆 Celebrate every win</span>
+      <span>💛 You belong here</span>
+      <span>📚 Read at your own pace</span>
+      <span>🎮 Fun word games</span>
+      <span>🔊 Listen to any text</span>
+      <span>🌈 Colourful learning</span>
+      <span>⭐ You are a star reader</span>
+      <span>🧠 Every brain is unique</span>
+      <span>🏆 Celebrate every win</span>
+      <span>💛 You belong here</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <h2 class="section-title">🎉 What Can You Do Here?</h2>
+    <div class="features-grid">
+      <div class="feature-card fc-yellow">
+        <span class="icon">🔊</span>
+        <h3>Listen to Text</h3>
+        <p>Press any button and our friendly voice will read the words out loud for you, slowly and clearly.</p>
+      </div>
+      <div class="feature-card fc-blue">
+        <span class="icon">🎮</span>
+        <h3>Word Games</h3>
+        <p>Play exciting games that make letters and words fun. Earn stars and badges as you go!</p>
+      </div>
+      <div class="feature-card fc-pink">
+        <span class="icon">🔤</span>
+        <h3>Dyslexia Font</h3>
+        <p>Switch to a special font that makes letters easier to tell apart. No more mixed-up b's and d's!</p>
+      </div>
+      <div class="feature-card fc-green">
+        <span class="icon">📏</span>
+        <h3>Big Text</h3>
+        <p>Make all the words on the page bigger or smaller until they feel just right for your eyes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <h2 class="section-title">✨ How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num sn-1">1</div>
+        <h3>Visit the Site</h3>
+        <p>Open ReadBright on any phone, tablet, or computer. No sign-up needed!</p>
+      </div>
+      <div class="step">
+        <div class="step-num sn-2">2</div>
+        <h3>Pick Your Tools</h3>
+        <p>Use the toolbar to make text bigger, change the font, or turn on dark mode.</p>
+      </div>
+      <div class="step">
+        <div class="step-num sn-3">3</div>
+        <h3>Play &amp; Learn</h3>
+        <p>Head to Activities and choose a fun word game or reading exercise.</p>
+      </div>
+      <div class="step">
+        <div class="step-num sn-4">4</div>
+        <h3>Celebrate! 🏆</h3>
+        <p>Earn stars for every activity you finish. Every step forward is a win!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section id="tips">
+    <h2 class="section-title">💡 Helpful Reading Tips</h2>
+    <div class="tips-grid">
+      <div class="tip-card tc-o">
+        <span class="tip-emoji">🖊️</span>
+        <div>
+          <h4>Use a Finger</h4>
+          <p>Point to each word as you read. It helps your brain focus on one word at a time.</p>
+        </div>
+      </div>
+      <div class="tip-card tc-p">
+        <span class="tip-emoji">🕐</span>
+        <div>
+          <h4>Take Your Time</h4>
+          <p>Slow reading is smart reading. There is no race. Every reader goes at their own pace.</p>
+        </div>
+      </div>
+      <div class="tip-card tc-b">
+        <span class="tip-emoji">🎧</span>
+        <div>
+          <h4>Listen First</h4>
+          <p>Press the Read Aloud button to hear a word or sentence before you try to read it yourself.</p>
+        </div>
+      </div>
+      <div class="tip-card tc-g">
+        <span class="tip-emoji">🌈</span>
+        <div>
+          <h4>Colour the Words</h4>
+          <p>Use coloured rulers or overlays on paper. Try yellow — many dyslexic readers love it!</p>
+        </div>
+      </div>
+      <div class="tip-card tc-y">
+        <span class="tip-emoji">💪</span>
+        <div>
+          <h4>Celebrate Mistakes</h4>
+          <p>Mistakes mean you are trying. Every mistake teaches your brain something new. Go you!</p>
+        </div>
+      </div>
+      <div class="tip-card tc-pk">
+        <span class="tip-emoji">😴</span>
+        <div>
+          <h4>Rest Your Eyes</h4>
+          <p>After reading for 20 minutes, look at something far away for 20 seconds. Your eyes will thank you!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <h2>Ready to Start Your Reading Adventure? 🚀</h2>
+    <p>Jump into our fun activities and discover how amazing YOU really are!</p>
+    <a href="{% url 'activities' %}" class="btn-white">🎮 Go to Activities</a>
+  </section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  document.getElementById('hero-listen').addEventListener('click', function(e) {
+    e.preventDefault();
+    const heroP = document.querySelector('.hero-text p').innerText;
+    speakText(heroP);
+  });
+</script>
+{% endblock %}
